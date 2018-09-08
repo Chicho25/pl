@@ -1,9 +1,21 @@
 <?php
-      include('include/config.php');
-      include('include/defs.php');
+
+include("include/functions_tayron.php");
 
 if (isset($_POST['t1uno'], $_POST['t2tres'], $_POST['t3tres'])) {
   // code...
+
+if (isset($_POST['finalizar'])) {
+
+  $ingreso = array("t1" => 3,
+                   "t2" => 3,
+                   "t3" => 3,
+                   "descriptions"=>"",
+                   "date_time" => date("Y-m-d H:i:s"),
+                    "stat" => 1);
+
+  $insert = InsertRec("events", $ingreso);
+}
 
 if ($_POST['t1uno'] == 1 && $_POST['t2tres'] == 1 && $_POST['t3tres'] == 1) {
 
@@ -16,9 +28,10 @@ if ($_POST['t1uno'] == 1 && $_POST['t2tres'] == 1 && $_POST['t3tres'] == 1) {
 
     $insert = InsertRec("events", $ingreso);
 
-    $claset1_0 = " btn btn-basic boton";
-    $claset2_92 = " btn btn-basic boton";
-    $claset3_92 = " btn btn-basic boton";
+    $claset1_0 = " btn btn-warning boton";
+    $claset2_92 = " btn btn-warning boton";
+    $claset3_92 = " btn btn-warning boton";
+    $detalle_m = "44,0 m";
 
 }else if ($_POST['t1dos'] == 1 && $_POST['t2cuatro'] == 1 && $_POST['t3cuatro'] == 1) {
 
@@ -31,9 +44,10 @@ if ($_POST['t1uno'] == 1 && $_POST['t2tres'] == 1 && $_POST['t3tres'] == 1) {
 
     $insert = InsertRec("events", $ingreso);
 
-    $claset1_50 = " btn btn-basic boton";
-    $claset2_100 = " btn btn-basic boton";
-    $claset3_100 = " btn btn-basic boton";
+    $claset1_50 = " btn btn-warning boton";
+    $claset2_100 = " btn btn-warning boton";
+    $claset3_100 = " btn btn-warning boton";
+    $detalle_m = "52,9 m";
 
 }else if ($_POST['t1tres'] == 1 && $_POST['t2tres'] == 1 && $_POST['t3tres'] == 1) {
 
@@ -46,9 +60,10 @@ if ($_POST['t1uno'] == 1 && $_POST['t2tres'] == 1 && $_POST['t3tres'] == 1) {
 
     $insert = InsertRec("events", $ingreso);
 
-    $claset1_92 = " btn btn-basic boton";
-    $claset2_92 = " btn btn-basic boton";
-    $claset3_92 = " btn btn-basic boton";
+    $claset1_92 = " btn btn-warning boton";
+    $claset2_92 = " btn btn-warning boton";
+    $claset3_92 = " btn btn-warning boton";
+    $detalle_m = "56,4 m";
 
 }else if ($_POST['t1cuatro'] == 1 && $_POST['t2cuatro'] == 1 && $_POST['t3cuatro'] == 1) {
 
@@ -61,9 +76,10 @@ if ($_POST['t1uno'] == 1 && $_POST['t2tres'] == 1 && $_POST['t3tres'] == 1) {
 
     $insert = InsertRec("events", $ingreso);
 
-    $claset1_100 = " btn btn-basic boton";
-    $claset2_100 = " btn btn-basic boton";
-    $claset3_100 = " btn btn-basic boton";
+    $claset1_100 = " btn btn-warning boton";
+    $claset2_100 = " btn btn-warning boton";
+    $claset3_100 = " btn btn-warning boton";
+    $detalle_m = "60 m";
 
 }else if ($_POST['t1tres'] == 1 && $_POST['t2tres'] == 1 && $_POST['t3uno'] == 1) {
 
@@ -75,9 +91,10 @@ if ($_POST['t1uno'] == 1 && $_POST['t2tres'] == 1 && $_POST['t3tres'] == 1) {
 
     $insert = InsertRec("events", $ingreso);
 
-    $claset1_92 = " btn btn-basic boton";
-    $claset2_92 = " btn btn-basic boton";
-    $claset3_0 = " btn btn-basic boton";
+    $claset1_92 = " btn btn-warning boton";
+    $claset2_92 = " btn btn-warning boton";
+    $claset3_0 = " btn btn-warning boton";
+    $detalle_m = "44,0 m";
 
 }else if ($_POST['t1tres'] == 1 && $_POST['t2tres'] == 1 && $_POST['t3dos'] == 1) {
 
@@ -89,23 +106,25 @@ if ($_POST['t1uno'] == 1 && $_POST['t2tres'] == 1 && $_POST['t3tres'] == 1) {
 
   $insert = InsertRec("events", $ingreso);
 
-  $claset1_92 = " btn btn-basic boton";
-  $claset2_92 = " btn btn-basic boton";
-  $claset3_50 = " btn btn-basic boton";
+  $claset1_92 = " btn btn-warning boton";
+  $claset2_92 = " btn btn-warning boton";
+  $claset3_50 = " btn btn-warning boton";
+  $detalle_m = "50,7 m";
 
 }else if ($_POST['t1tres'] == 1 && $_POST['t2tres'] == 1 && $_POST['t3tres'] == 1) {
 
   $ingreso = array("t1" => 92,
                    "t2" => 92,
                    "t3" => 50,
-                   "descriptions"=>"56,4",
+                   "descriptions"=>"56,4 m",
                    "date_time" => date("Y-m-d H:i:s"));
 
   $insert = InsertRec("events", $ingreso);
 
-  $claset1_92 = " btn btn-basic boton";
-  $claset2_92 = " btn btn-basic boton";
-  $claset3_92 = " btn btn-basic boton";
+  $claset1_92 = " btn btn-warning boton";
+  $claset2_92 = " btn btn-warning boton";
+  $claset3_92 = " btn btn-warning boton";
+  $detalle_m = "56,4 m";
 
 }else if ($_POST['t1cuatro'] == 1 && $_POST['t2cuatro'] == 1 && $_POST['t3cuatro'] == 1) {
 
@@ -117,9 +136,10 @@ if ($_POST['t1uno'] == 1 && $_POST['t2tres'] == 1 && $_POST['t3tres'] == 1) {
 
   $insert = InsertRec("events", $ingreso);
 
-  $claset1_100 = " btn btn-basic boton";
-  $claset2_100 = " btn btn-basic boton";
-  $claset3_100 = " btn btn-basic boton";
+  $claset1_100 = " btn btn-warning boton";
+  $claset2_100 = " btn btn-warning boton";
+  $claset3_100 = " btn btn-warning boton";
+  $detalle_m = "60 m";
 
 }else if ($_POST['t1uno'] == 1 && $_POST['t2uno'] == 1 && $_POST['t3uno'] == 1) {
 
@@ -131,9 +151,10 @@ if ($_POST['t1uno'] == 1 && $_POST['t2tres'] == 1 && $_POST['t3tres'] == 1) {
 
   $insert = InsertRec("events", $ingreso);
 
-  $claset1_0 = " btn btn-basic boton";
-  $claset2_0 = " btn btn-basic boton";
-  $claset3_0 = " btn btn-basic boton";
+  $claset1_0 = " btn btn-warning boton";
+  $claset2_0 = " btn btn-warning boton";
+  $claset3_0 = " btn btn-warning boton";
+  $detalle_m = "19,3 m";
 
 }else if ($_POST['t1dos'] == 1 && $_POST['t2uno'] == 1 && $_POST['t3uno'] == 1) {
 
@@ -145,9 +166,10 @@ if ($_POST['t1uno'] == 1 && $_POST['t2tres'] == 1 && $_POST['t3tres'] == 1) {
 
   $insert = InsertRec("events", $ingreso);
 
-  $claset1_50 = " btn btn-basic boton";
-  $claset2_0 = " btn btn-basic boton";
-  $claset3_0 = " btn btn-basic boton";
+  $claset1_50 = " btn btn-warning boton";
+  $claset2_0 = " btn btn-warning boton";
+  $claset3_0 = " btn btn-warning boton";
+  $detalle_m = "26,0 m";
 
 }else if ($_POST['t1tres'] == 1 && $_POST['t2uno'] == 1 && $_POST['t3uno'] == 1) {
 
@@ -159,9 +181,10 @@ if ($_POST['t1uno'] == 1 && $_POST['t2tres'] == 1 && $_POST['t3tres'] == 1) {
 
   $insert = InsertRec("events", $ingreso);
 
-  $claset1_92 = " btn btn-basic boton";
-  $claset2_0 = " btn btn-basic boton";
-  $claset3_0 = " btn btn-basic boton";
+  $claset1_92 = " btn btn-warning boton";
+  $claset2_0 = " btn btn-warning boton";
+  $claset3_0 = " btn btn-warning boton";
+  $detalle_m = "31,6 m";
 
 }else if ($_POST['t1tres'] == 1 && $_POST['t2dos'] == 1 && $_POST['t3uno'] == 1) {
 
@@ -173,11 +196,52 @@ if ($_POST['t1uno'] == 1 && $_POST['t2tres'] == 1 && $_POST['t3tres'] == 1) {
 
   $insert = InsertRec("events", $ingreso);
 
-  $claset1_92 = " btn btn-basic boton";
-  $claset2_50 = " btn btn-basic boton";
-  $claset3_0 = " btn btn-basic boton";
+  $claset1_92 = " btn btn-warning boton";
+  $claset2_50 = " btn btn-warning boton";
+  $claset3_0 = " btn btn-warning boton";
+  $detalle_m = "38,4 m";
 
   }
+
+}else{
+
+$currently = Getrecords("SELECT * FROM events WHERE id = (SELECT max(id) FROM events)");
+
+  foreach ($currently as $key => $value) {
+      $t1 = $value['t1'];
+      $t2 = $value['t2'];
+      $t3 = $value['t3'];
+      $detalle_m = $value['descriptions'];
+  }
+    if ($t1 == 0) {
+       $claset1_0 = " btn btn-warning boton";
+    }elseif ($t1 == 50) {
+       $claset1_50 = " btn btn-warning boton";
+    }elseif ($t1 == 92) {
+       $claset1_92 = " btn btn-warning boton";
+    }else{
+       $claset1_100 = " btn btn-warning boton";
+    }
+
+    if ($t2 == 0) {
+       $claset2_0 = " btn btn-warning boton";
+    }elseif ($t2 == 50) {
+       $claset2_50 = " btn btn-warning boton";
+    }elseif ($t2 == 92) {
+       $claset2_92 = " btn btn-warning boton";
+    }else{
+       $claset2_100 = " btn btn-warning boton";
+    }
+
+    if ($t3 == 0) {
+       $claset3_0 = " btn btn-warning boton";
+    }elseif ($t3 == 50) {
+       $claset3_50 = " btn btn-warning boton";
+    }elseif ($t3 == 92) {
+       $claset3_92 = " btn btn-warning boton";
+    }else{
+       $claset3_100 = " btn btn-warning boton";
+    }
 
 }
  ?>
@@ -277,10 +341,17 @@ if ($_POST['t1uno'] == 1 && $_POST['t2tres'] == 1 && $_POST['t3tres'] == 1) {
            </div>
         </div>
         <div class="row">
-          <div class="col-md-10 well" style="font-size:52px;" id="pie">
-            <?php if (isset($_POST['t1uno'])) {
-              echo $_POST['t1uno'];
-            } ?>
+          <div class="col-md-8 well" style="font-size:52px;" id="pie">
+            <?php if (isset($detalle_m)) { ?>
+            <span style="color:green;">
+            <?php echo $detalle_m; ?>
+            </span>
+            <?php }else{ ?>
+            <span>0 m</span>
+            <?php } ?>
+          </div>
+          <div class="col-md-2 well">
+            <input onclick="finalizar_qq()" name="finalizar" value="Finalizar" class="btn btn-success boton">
           </div>
           <div class="col-md-2 well">
             <input type="submit" name="" value="Confirma" class="btn btn-success boton" onclick="confirmar()">
@@ -289,6 +360,13 @@ if ($_POST['t1uno'] == 1 && $_POST['t2tres'] == 1 && $_POST['t3tres'] == 1) {
         </form>
       </div>
         <script type="text/javascript">
+            function finalizar_qq(){
+              var confirmacion = confirm("Esta seguro que desea finalizar la aperacion");
+              if (confirmacion == true) {
+                document.formulario_panel.submit();
+              }
+            }
+
             function confirmar(){
               var confirmacion = confirm("Esta seguro que desea conformar la aperacion");
               if (confirmacion == true) {
@@ -438,3 +516,4 @@ if ($_POST['t1uno'] == 1 && $_POST['t2tres'] == 1 && $_POST['t3tres'] == 1) {
   <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
+<?php mysqli_close($enlace); ?>
